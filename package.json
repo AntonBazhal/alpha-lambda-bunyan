@@ -1,0 +1,50 @@
+{
+  "name": "lambda-handler-as-promised-bunyan",
+  "version": "1.0.0",
+  "description": "Bunyan logger middleware for lambda-handler-as-promised",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntonBazhal/lambda-handler-as-promised-bunyan.git"
+  },
+  "keywords": [
+    "aws",
+    "aws lambda",
+    "bunyan",
+    "lambda",
+    "log",
+    "logger",
+    "middleware",
+    "serverless"
+  ],
+  "main": "lib/middleware.js",
+  "scripts": {
+    "preinstall": "npm prune",
+    "lint": "eslint .",
+    "test": "nyc mocha",
+    "posttest": "npm run lint"
+  },
+  "author": {
+    "name": "Anton Bazhal",
+    "email": "am.bazhal@gmail.com"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "lambda-handler-as-promised": ">= 2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "chai-subset": "^1.5.0",
+    "env-test": "^1.0.0",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
+    "uuid": "^3.1.0"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "lodash": "^4.17.4"
+  }
+}
