@@ -51,8 +51,8 @@ module.exports = handler()
 ## Configuration
 
 `lambda-handler-as-promised-bunyan` accepts an optional configuration object, where:
-  **[level]** - { String | Number } - [logging level][bunyan-levels-url]; when not set, logging level is taken from `LOG_LEVEL` environment variable (`info` by default)
-  **[serializers]** - { Object } - [custom serializers][bunyan-serializers-url] that override / extend existing ones
+  - **[level]** - { String | Number } - [logging level][bunyan-levels-url]; when not set, logging level is taken from `LOG_LEVEL` environment variable (`info` by default)
+  - **[serializers]** - { Object } - [custom serializers][bunyan-serializers-url] that override / extend existing ones
 
 ## License
 
