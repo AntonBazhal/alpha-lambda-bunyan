@@ -1,10 +1,10 @@
 {
-  "name": "lambda-handler-as-promised-bunyan",
+  "name": "alpha-lambda-bunyan",
   "version": "1.0.0",
-  "description": "Bunyan logger middleware for lambda-handler-as-promised",
+  "description": "Bunyan logger middleware for alpha-lambda",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AntonBazhal/lambda-handler-as-promised-bunyan.git"
+    "url": "https://github.com/AntonBazhal/alpha-lambda-bunyan.git"
   },
   "keywords": [
     "aws",
@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "lambda-handler-as-promised": ">= 2.0.0"
+    "alpha-lambda": ">= 1.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.1",

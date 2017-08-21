@@ -1,4 +1,4 @@
-# lambda-handler-as-promised-bunyan
+# alpha-lambda-bunyan
 
 [![Build Status][ci-image]][ci-url]
 [![Coverage Status][coverage-image]][coverage-url]
@@ -6,19 +6,19 @@
 [![Dependencies Status][dependencies-image]][dependencies-url]
 [![DevDependencies Status][devdependencies-image]][devdependencies-url]
 
-Middleware for [lambda-handler-as-promised][lambda-handler-as-promised-url] that adds `log` and `child` methods to the [context][aws-context-url] object.
+Middleware for [alpha-lambda][alpha-lambda-url] that adds `log` and `child` methods to the [context][aws-context-url] object.
 
 ## Installation
 
 ```bash
-$ npm install lambda-handler-as-promised-bunyan
+$ npm install alpha-lambda-bunyan
 ```
 
 ## Usage
 
 ```js
-const bunyan = require('lambda-handler-as-promised-bunyan');
-const handler = require('lambda-handler-as-promised');
+const bunyan = require('alpha-lambda-bunyan');
+const handler = require('alpha-lambda');
 
 module.exports = handler()
   .use(bunyan({
@@ -50,7 +50,7 @@ module.exports = handler()
 
 ## Configuration
 
-`lambda-handler-as-promised-bunyan` accepts an optional configuration object, where:
+`alpha-lambda-bunyan` accepts an optional configuration object, where:
   - **[level]** - { String | Number } - [logging level][bunyan-levels-url]; when not set, logging level is taken from `LOG_LEVEL` environment variable (`info` by default)
   - **[serializers]** - { Object } - [custom serializers][bunyan-serializers-url] that override / extend existing ones
 
@@ -66,20 +66,20 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+[alpha-lambda-url]: https://www.npmjs.com/package/alpha-lambda
 [aws-context-url]: http://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-context.html
 [aws-lambda-url]: https://aws.amazon.com/lambda/details/
 [bunyan-levels-url]: https://www.npmjs.com/package/bunyan#levels
 [bunyan-log-child-url]: https://www.npmjs.com/package/bunyan#logchild
 [bunyan-serializers-url]: https://www.npmjs.com/package/bunyan#serializers
 [bunyan-url]: https://www.npmjs.com/package/bunyan
-[ci-image]: https://circleci.com/gh/AntonBazhal/lambda-handler-as-promised-bunyan.svg?style=shield&circle-token=85b132cd2d5da242b4a0c104bcc589f2cd015e8e
-[ci-url]: https://circleci.com/gh/AntonBazhal/lambda-handler-as-promised-bunyan
-[coverage-image]: https://coveralls.io/repos/github/AntonBazhal/lambda-handler-as-promised-bunyan/badge.svg?branch=master
-[coverage-url]: https://coveralls.io/github/AntonBazhal/lambda-handler-as-promised-bunyan?branch=master
-[dependencies-url]: https://david-dm.org/antonbazhal/lambda-handler-as-promised-bunyan
-[dependencies-image]: https://david-dm.org/antonbazhal/lambda-handler-as-promised-bunyan/status.svg
-[devdependencies-url]: https://david-dm.org/antonbazhal/lambda-handler-as-promised-bunyan?type=dev
-[devdependencies-image]: https://david-dm.org/antonbazhal/lambda-handler-as-promised-bunyan/dev-status.svg
-[lambda-handler-as-promised-url]: https://www.npmjs.com/package/lambda-handler-as-promised
-[npm-url]: https://www.npmjs.org/package/lambda-handler-as-promised-bunyan
-[npm-image]: https://img.shields.io/npm/v/lambda-handler-as-promised-bunyan.svg
+[ci-image]: https://circleci.com/gh/AntonBazhal/alpha-lambda-bunyan.svg?style=shield&circle-token=85b132cd2d5da242b4a0c104bcc589f2cd015e8e
+[ci-url]: https://circleci.com/gh/AntonBazhal/alpha-lambda-bunyan
+[coverage-image]: https://coveralls.io/repos/github/AntonBazhal/alpha-lambda-bunyan/badge.svg?branch=master
+[coverage-url]: https://coveralls.io/github/AntonBazhal/alpha-lambda-bunyan?branch=master
+[dependencies-url]: https://david-dm.org/antonbazhal/alpha-lambda-bunyan
+[dependencies-image]: https://david-dm.org/antonbazhal/alpha-lambda-bunyan/status.svg
+[devdependencies-url]: https://david-dm.org/antonbazhal/alpha-lambda-bunyan?type=dev
+[devdependencies-image]: https://david-dm.org/antonbazhal/alpha-lambda-bunyan/dev-status.svg
+[npm-url]: https://www.npmjs.org/package/alpha-lambda-bunyan
+[npm-image]: https://img.shields.io/npm/v/alpha-lambda-bunyan.svg
