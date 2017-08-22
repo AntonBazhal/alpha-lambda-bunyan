@@ -48,6 +48,21 @@ module.exports = handler()
 
 `context.child` method provides a way to create child logger with additional bound fields to be included into log records. Please note, that original context is cloned, so it is not mutated. This method is based on [bunyan's log.child method][bunyan-log-child-url].
 
+### extend(context, [options])
+
+Library exports `extend` method, so it can be used not just like middleware.
+
+```js
+const bunyan = require('alpha-lambda-bunyan');
+const handler = require('alpha-lambda');
+
+module.exports = handler()
+  .use((event, context) => {
+    const newContext = bunyan.extend(context, { level: 'debug' });
+    return doSomething(newContext, event);
+  });
+```
+
 ## Configuration
 
 `alpha-lambda-bunyan` accepts an optional configuration object, where:
