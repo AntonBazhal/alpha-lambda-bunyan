@@ -7,6 +7,7 @@ const chaiSubset = require('chai-subset');
 const uuid = require('uuid');
 
 const middleware = require('../lib/middleware');
+const serializers = require('../lib/serializers');
 
 chai.use(chaiSubset);
 const expect = chai.expect;
@@ -109,6 +110,18 @@ describe('middleware', function() {
           custom: customSerializer
         });
     });
+  });
+
+  it('should export extend method', function() {
+    expect(middleware)
+      .to.have.property('extend')
+      .that.is.a('function');
+  });
+
+  it('should export serializers', function() {
+    expect(middleware)
+      .to.have.property('serializers')
+      .that.deep.equals(serializers);
   });
 
   describe('#child', function() {
