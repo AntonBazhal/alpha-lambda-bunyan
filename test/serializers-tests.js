@@ -6,10 +6,11 @@ const serializers = require('../lib/serializers');
 
 describe('serializers', function() {
   describe('contextSerializer', function() {
-    it('should omit "log" and "child" properties', function() {
+    it('should omit "log", "child", and "_refProps" properties', function() {
       const initialContext = {
         log: 'log',
         child: 'child',
+        _refProps: ['prop1', 'prop2'],
         meaningOfLife: 42
       };
 
