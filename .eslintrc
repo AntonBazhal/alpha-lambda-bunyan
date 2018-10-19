@@ -22,4 +22,5 @@ rules:
     no-tabs: 0
     no-underscore-dangle: 0
     padded-blocks: 0
+    prefer-destructuring: 0
     space-before-function-paren: 0
