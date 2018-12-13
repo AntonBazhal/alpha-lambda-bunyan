@@ -68,6 +68,7 @@ module.exports = handler()
 `alpha-lambda-bunyan` accepts an optional configuration object, where:
   - **[level]** - { String | Number } - [logging level][bunyan-levels-url]; when not set, logging level is taken from `LOG_LEVEL` environment variable (`info` by default)
   - **[serializers]** - { Object } - [custom serializers][bunyan-serializers-url] that override / extend existing ones
+  - **[refProps]** - { String | String[] } - properties on the context that should be shallow copied and not deep copied when a child context is created
 
 ## License
 
