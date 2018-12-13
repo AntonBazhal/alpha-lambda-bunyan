@@ -141,5 +141,47 @@ describe('middleware', function() {
         });
       });
     });
+
+    it('should create child context, and deep copy object properties', function() {
+      const testField = 'testField';
+      const fixture = middleware();
+      const contextWithObject = _.cloneDeep(this.testContext);
+      contextWithObject.objProperty = Object.create({
+        test: 'data'
+      });
+
+      return fixture({}, contextWithObject, (err, newContext) => {
+        const childContext = newContext.child({ testField });
+        expect(childContext).not.to.deep.equal(newContext);
+        expect(childContext).to.have.property('objProperty');
+        expect(childContext.objProperty).to.not.equal(newContext.objProperty);
+        expect(childContext).to.containSubset({
+          log: {
+            fields: { testField }
+          }
+        });
+      });
+    });
+
+    it('should create child context, and reference original properties provided', function() {
+      const testField = 'testField';
+      const fixture = middleware({ refProps: ['objProperty'] });
+      const contextWithObject = _.cloneDeep(this.testContext);
+      contextWithObject.objProperty = Object.create({
+        test: 'data'
+      });
+
+      return fixture({}, contextWithObject, (err, newContext) => {
+        const childContext = newContext.child({ testField });
+        expect(childContext).not.to.deep.equal(newContext);
+        expect(childContext).to.have.property('objProperty');
+        expect(childContext.objProperty).equals(newContext.objProperty);
+        expect(childContext).to.containSubset({
+          log: {
+            fields: { testField }
+          }
+        });
+      });
+    });
   });
 });
