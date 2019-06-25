@@ -112,6 +112,20 @@ describe('middleware', function() {
     });
   });
 
+  it('should tolerate missing function name', function() {
+    const fixture = middleware();
+
+    return fixture({}, {}, (err, newContext) => {
+      expect(newContext)
+        .to.have.property('log')
+        .that.containSubset({
+          fields: {
+            name: 'unknown'
+          }
+        });
+    });
+  });
+
   it('should export extend method', function() {
     expect(middleware)
       .to.have.property('extend')
