@@ -9,7 +9,7 @@ extends:
     - "airbnb-base"
 
 parserOptions:
-    sourceType: "scripts"
+    sourceType: "script"
 
 rules:
     arrow-body-style: 0
@@ -24,3 +24,4 @@ rules:
     padded-blocks: 0
     prefer-destructuring: 0
     space-before-function-paren: 0
+    strict: [2, "global"]
