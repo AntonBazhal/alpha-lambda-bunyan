@@ -1,6 +1,6 @@
 {
   "name": "alpha-lambda-bunyan",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Bunyan logger middleware for alpha-lambda",
   "repository": {
     "type": "git",
@@ -27,9 +27,6 @@
     "email": "am.bazhal@gmail.com"
   },
   "license": "MIT",
-  "peerDependencies": {
-    "alpha-lambda": ">=1.1.0"
-  },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-subset": "^1.6.0",
